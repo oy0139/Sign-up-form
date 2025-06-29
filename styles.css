@@ -7,3 +7,34 @@
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.Container {
+    display: flex;
+}
+
+.sidebar-background {
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg")
+}
+
+.logo {
+    background-image: url("odin-lined.png")
+}
+
+.attribution img{
+    height: 200px;
+    width: auto;
+}
+
+button,
+input {
+    font-family: inherit;
+    font-size: 100%;
+    width: 200px;
+}
