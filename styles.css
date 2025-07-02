@@ -13,28 +13,51 @@
 
 body {
     box-sizing: border-box;
+    margin: 0;
+    font-family: 'norsebold', sans-serif;
 }
 
 .Container {
     display: flex;
+    min-height: 100vh;
 }
 
 .sidebar-background {
-    background-image: url("halie-west-25xggax4bSA-unsplash.jpg")
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: cover;
+    display: flex;
+    width: 32vw;
+    height: 800px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    background-image: url("odin-lined.png")
+    background-image: url("odin-lined.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+    padding: 70px;
+
 }
 
-.attribution img{
-    height: 200px;
-    width: auto;
+.logo-text {
+    font-size: 3em;
+    margin-top: -40px;
 }
-
 button,
 input {
     font-family: inherit;
     font-size: 100%;
     width: 200px;
+}
+
+.attribution {
+    font-size: .75rem;
+    margin-top: 400px;
+}
+
+.main-content {
+    width: 68vw;
 }
