@@ -23,6 +23,7 @@ body {
 }
 
 .sidebar-background {
+    position: relative;
     background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
     background-size: cover;
     display: flex;
@@ -34,12 +35,21 @@ body {
     justify-content: center;
 }
 
+.sidebar-background::before {
+    position: absolute;
+    content: "";
+    height: 150px;
+    width: 32vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 90px;
+}
+
 .logo {
     background-image: url("odin-lined.png");
     background-size: 70px;
     background-repeat: no-repeat;
     padding: 70px;
-
+    z-index: 1; /*Puts logo content above the pseudo element*/
 }
 
 .logo-text {
@@ -53,11 +63,95 @@ input {
     width: 200px;
 }
 
+
 .attribution {
     font-size: .75rem;
     margin-top: 400px;
 }
 
 .main-content {
+    position: relative; 
     width: 68vw;
+    background-color: rgb(242, 242, 242);
+    
 }
+
+.main-content-text { /*keeps the background gray and moves the text uniformly*/
+    position: relative; 
+    top: 40px;
+    left: 20px;
+}
+
+.heading-text {
+    width: 30vw;
+    margin-bottom: 30px;
+}
+
+.subheading {
+    margin-bottom: 70px;
+}
+
+label {
+    display: block; /*puts the box below the label*/
+    font-size: .65rem;
+}
+
+.form-input {
+    margin-bottom: 20px;
+}
+
+.main-content::before {
+    content: ""; /*needs to be here to render*/
+    top: 220px;
+    height: 250px;
+    width: 68vw;
+    z-index: 0; /*puts it behind the content*/
+    background-color: white;
+    position: absolute; 
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.form-elements { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+   max-width: 580px;
+   margin-bottom: 40px;
+}
+
+.form-elements > div {
+    width: 48%; 
+}
+
+input {
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+}
+input:focus {
+    outline: none; /*removes weird white outline when clicking*/
+    border: 1px solid blue;
+    box-shadow: 3px 3px 5px;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #596D48;
+    color: white;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+}
+
+/*so we have gap to seperate the form elements and the header in the form input container
+now we need to put two form elements side by side in three rows, after we put the header to contain all of its 
+wdith. we need a way to make the width hold two rows, but it seems like the div is forcing each onto a new
+line. */

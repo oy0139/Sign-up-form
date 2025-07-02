@@ -17,17 +17,18 @@
            </div>
         </div>
         <div class="main-content">
-            <p class="header">This is not a real online service! You know you need something like this in your life
+            <span class="main-content-text">
+            <p class="heading-text">This is not a real online service! You know you need something like this in your life
                 to help you realize your deepest dreams. Sign up <em>now</em> to get started.
             </p>
-            <p class="subheading">You<em> know </em>you want to</p>
+            <p class="subheading">You <em>know</em> you want to</p>
             <div class="form-input">
                 <div class="header">Let's do this!</div>
                 <form action="#" method="get">
                 <div class="form-elements">
                     <div>
                         <label for="first-name">First Name:</label>
-                        <input type="text" id="first-name" name="user_first-name" required>  
+                        <input type="text" id="first-name" name="user_first-name" pattern="[a-zA-Z]+">  
                     </div>
                     <div>
                         <label for="last-name">Last Name:</label>
@@ -43,24 +44,24 @@
                     </div>
                     <div>
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="user_password" >
+                        <input type="password" id="password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
                     </div>
                     <div>
                         <label for="confirm_password">Confirm Password</label>
                         <input type="password" id="confirm_password" name="user_password-confirmation">
                     </div>
                  </div>
-                
+                </div>
                  <p>
                     <button type="submit">Create Account</button>
                  </p>
                  </form>
-        
+       
                  <p class="footer-text">
                     Already have an account? <a href="#">Log In</a>
                  </p>
                  
-            </div>
+            </span>
         </div>
     </div>
 </body>
